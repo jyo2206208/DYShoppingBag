@@ -7,12 +7,18 @@
 //
 
 #import "DYViewController.h"
+#import "DYShoppingBagViewController.h"
 
 @interface DYViewController ()
 
 @end
 
 @implementation DYViewController
+
+- (IBAction)presentNewController:(id)sender {
+    DYShoppingBagViewController *shoppingBagViewController = [[DYShoppingBagViewController alloc] init];
+    [self presentViewController:shoppingBagViewController animated:YES completion:nil];
+}
 
 - (void)viewDidLoad
 {
