@@ -8,6 +8,7 @@
 
 #import "Target_DYShoppingBag.h"
 #import "DYShoppingBagViewController.h"
+#import "DYShoppingBagIconView.h"
 
 typedef void (^DYCallCenterCallbackBlock)(NSDictionary *info);
 
@@ -27,6 +28,10 @@ typedef void (^DYCallCenterCallbackBlock)(NSDictionary *info);
     if (callback) {
         callback(@{@"productCount":@(array.count)});
     }
+}
+
+- (UIView *)Action_bagIcon:(NSDictionary *)params{
+    return [[DYShoppingBagIconView alloc] init];
 }
 
 @end
