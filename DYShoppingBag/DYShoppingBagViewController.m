@@ -20,8 +20,6 @@
 - (instancetype)init{
     self = [super init];
     if (self) {
-        NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-        [userDefaults setObject:[NSMutableArray arrayWithObjects:@0,@0,@0, nil] forKey:@"productList"];
         self.productList = [self productListFromBackEnd];
     }
     return self;
@@ -34,7 +32,7 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
     self.shoppingBagLabel = [[UILabel alloc] initWithFrame:CGRectMake(50, 100, 300, 100)];
-    self.shoppingBagLabel.text = [NSString stringWithFormat:@"You have %lu products", (unsigned long)self.productList.count];
+    self.shoppingBagLabel.text = [NSString stringWithFormat:@"You have %lu products", (unsigned long)[self productListFromBackEnd].count];
     [self.view addSubview:self.shoppingBagLabel];
     
     
