@@ -11,6 +11,8 @@
 @interface Target_DYShoppingBag : NSObject
 
 - (UIViewController *)Action_shoppingBagViewController:(NSDictionary *)params;
+- (NSString *)Action_shoppingCount:(NSDictionary *)params;
 - (void)Action_addProductToBag:(NSDictionary *)params;
+- (UIImage *)Action_bagIcon:(NSDictionary *)params;
 
 @end

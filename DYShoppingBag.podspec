@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'DYShoppingBag'
-  s.version          = '0.0.6'
+  s.version          = '0.0.7'
   s.summary          = 'A meaningful description of DYShoppingBag.'
 
 # This description is used to generate tags and improve search results.

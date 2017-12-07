@@ -8,17 +8,21 @@
 
 #import "Target_DYShoppingBag.h"
 #import "DYShoppingBagViewController.h"
-#import "DYShoppingBagIconView.h"
 
 typedef void (^DYCallCenterCallbackBlock)(NSDictionary *info);
 
 @implementation Target_DYShoppingBag
 
-- (UIViewController *)Action_shoppingBagViewController:(NSDictionary *)params{
+- (UIViewController *)Action_shoppingBagViewController:(NSDictionary *)params {
     return [[DYShoppingBagViewController alloc] init];
 }
 
-- (void)Action_addProductToBag:(NSDictionary *)params{
+- (NSString *)Action_shoppingCount:(NSDictionary *)params {
+    DYShoppingBagViewController *controller = [[DYShoppingBagViewController alloc] init];
+    return [NSString stringWithFormat:@"%lu",(unsigned long)controller.productList.count];
+}
+
+- (void)Action_addProductToBag:(NSDictionary *)params {
     //如果使用了rac或者promiskid。这里的异步操作会更优雅
     DYCallCenterCallbackBlock callback = params[@"confirmAction"];
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
@@ -30,8 +34,8 @@ typedef void (^DYCallCenterCallbackBlock)(NSDictionary *info);
     }
 }
 
-- (UIView *)Action_bagIcon:(NSDictionary *)params{
-    return [[DYShoppingBagIconView alloc] init];
+- (UIImage *)Action_bagIcon:(NSDictionary *)params {
+    return [UIImage imageNamed:@"shoppingBag"];
 }
 
 @end

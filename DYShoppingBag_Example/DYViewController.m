@@ -7,11 +7,11 @@
 //
 
 #import "DYViewController.h"
-#import "DYShoppingBagViewController.h"
-#import "DYShoppingBagIconView.h"
+#import "Target_DYShoppingBag.h"
 
 @interface DYViewController ()
 
+@property (nonatomic, strong) Target_DYShoppingBag *target;
 
 
 @end
@@ -21,26 +21,17 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.target = [[Target_DYShoppingBag alloc] init];
     
-    DYShoppingBagViewController *shoppingBagViewController = [[DYShoppingBagViewController alloc] init];
+    UIBarButtonItem *rightBarButtonItemIcon = [[UIBarButtonItem alloc] initWithImage:[self.target Action_bagIcon:nil] style:UIBarButtonItemStyleDone target:self action:@selector(presentBagController)];
+    UIBarButtonItem *rightBarButtonItemCount = [[UIBarButtonItem alloc] initWithTitle:[self.target Action_shoppingCount:nil] style:UIBarButtonItemStyleDone target:self action:@selector(presentBagController)];
     
-    
-    DYShoppingBagIconView *icon = [[DYShoppingBagIconView alloc] init];
-    icon.countLabel.text = [NSString stringWithFormat:@"%lu",(unsigned long)shoppingBagViewController.productList.count];
-    __weak typeof (self) weakSelf = self;
-    icon.action = ^{
-        [weakSelf presentViewController:shoppingBagViewController animated:YES completion:nil];
-    };
-    UIBarButtonItem *rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:icon];
-    
-    self.navigationItem.rightBarButtonItem = rightBarButtonItem;
+    self.navigationItem.rightBarButtonItems = @[rightBarButtonItemIcon,rightBarButtonItemCount];
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void) presentBagController {
+    [self presentViewController:[self.target Action_shoppingBagViewController:nil] animated:YES completion:nil];
 }
 
 @end
