@@ -36,7 +36,7 @@ typedef void (^DYCallCenterCallbackBlock)(NSDictionary *info);
 
 - (UIImage *)Action_bagIcon:(NSDictionary *)params {
     NSBundle *bundle = [NSBundle bundleWithPath:[[NSBundle bundleForClass:[Target_DYShoppingBag class]] pathForResource:@"DYShoppingBag" ofType:@"bundle"]];
-    return [[UIImage imageWithContentsOfFile:[bundle pathForResource:@"shoppingBag" ofType:@"png"]] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+    return [[UIImage imageWithContentsOfFile:[bundle pathForResource:@"shoppingBag" ofType:@"png"]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
 }
 
 @end
