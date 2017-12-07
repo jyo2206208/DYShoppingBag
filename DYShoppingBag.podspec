@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'DYShoppingBag'
-  s.version          = '0.0.2'
+  s.version          = '0.0.3'
   s.summary          = 'A meaningful description of DYShoppingBag.'
 
 # This description is used to generate tags and improve search results.
@@ -30,7 +30,7 @@ TODO: Add long description of the pod here. For DYShoppingBag.
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'DYShoppingBag/*.{h,m}'
+  s.source_files = 'DYShoppingBag/**/*.{h,m}'
   
   # s.resource_bundles = {
   #   'DYShoppingBag' => ['DYShoppingBag/Assets/*.png']
