@@ -8,21 +8,32 @@
 
 #import "DYViewController.h"
 #import "DYShoppingBagViewController.h"
+#import "DYShoppingBagIconView.h"
 
 @interface DYViewController ()
+
+
 
 @end
 
 @implementation DYViewController
 
-- (IBAction)presentNewController:(id)sender {
-    DYShoppingBagViewController *shoppingBagViewController = [[DYShoppingBagViewController alloc] init];
-    [self presentViewController:shoppingBagViewController animated:YES completion:nil];
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    DYShoppingBagViewController *shoppingBagViewController = [[DYShoppingBagViewController alloc] init];
+    
+    
+    DYShoppingBagIconView *icon = [[DYShoppingBagIconView alloc] init];
+    icon.countLabel.text = [NSString stringWithFormat:@"%lu",(unsigned long)shoppingBagViewController.productList.count];
+    __weak typeof (self) weakSelf = self;
+    icon.action = ^{
+        [weakSelf presentViewController:shoppingBagViewController animated:YES completion:nil];
+    };
+    UIBarButtonItem *rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:icon];
+    
+    self.navigationItem.rightBarButtonItem = rightBarButtonItem;
 	// Do any additional setup after loading the view, typically from a nib.
 }
 

@@ -13,19 +13,23 @@
 @property (nonatomic, strong) UILabel *shoppingBagLabel;
 @property (nonatomic, strong) UIButton *closeButton;
 
-
-
-
 @end
 
 @implementation DYShoppingBagViewController
 
+- (instancetype)init{
+    self = [super init];
+    if (self) {
+        NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+        [userDefaults setObject:[NSMutableArray arrayWithObjects:@0,@0,@0, nil] forKey:@"productList"];
+        self.productList = [self productListFromBackEnd];
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    [userDefaults setObject:[NSMutableArray arrayWithObjects:@0,@0,@0, nil] forKey:@"productList"];
     
-    self.productList = [self productListFromBackEnd];
     
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
