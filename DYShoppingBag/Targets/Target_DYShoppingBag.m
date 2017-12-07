@@ -26,8 +26,9 @@ typedef void (^DYCallCenterCallbackBlock)(NSDictionary *info);
     //如果使用了rac或者promiskid。这里的异步操作会更优雅
     DYCallCenterCallbackBlock callback = params[@"confirmAction"];
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    NSMutableArray *array = [userDefaults objectForKey:@"productList"];
+    NSMutableArray *array = [NSMutableArray arrayWithArray:[userDefaults objectForKey:@"productList"]];
     [array addObject:@0];
+    [userDefaults setObject:array forKey:@"productList"];
     
     if (callback) {
         callback(@{@"productCount":@(array.count)});
