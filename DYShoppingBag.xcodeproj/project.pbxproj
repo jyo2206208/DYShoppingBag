@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1D19C9491FD914000090B804 /* shoppingBag@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D19C9461FD913FF0090B804 /* shoppingBag@2x.png */; };
-		1D19C94A1FD914000090B804 /* shoppingBag.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D19C9471FD913FF0090B804 /* shoppingBag.png */; };
-		1D19C94B1FD914000090B804 /* shoppingBag@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D19C9481FD914000090B804 /* shoppingBag@3x.png */; };
 		1DB4DC561FD7C92B00371AD7 /* DYShoppingBagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DB4DC551FD7C92B00371AD7 /* DYShoppingBagViewController.m */; };
 		1DB4DC5B1FD7D90200371AD7 /* Target_DYShoppingBag.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DB4DC5A1FD7D90200371AD7 /* Target_DYShoppingBag.m */; };
 		4928FA68EA63DBB978254D2A /* Pods_DYShoppingBag_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C9A2768A2C937A51C09B2B3 /* Pods_DYShoppingBag_Example.framework */; };
@@ -42,9 +39,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1D19C9461FD913FF0090B804 /* shoppingBag@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shoppingBag@2x.png"; sourceTree = "<group>"; };
-		1D19C9471FD913FF0090B804 /* shoppingBag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shoppingBag.png; sourceTree = "<group>"; };
-		1D19C9481FD914000090B804 /* shoppingBag@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shoppingBag@3x.png"; sourceTree = "<group>"; };
+		1D19C9541FD936370090B804 /* shoppingBag@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shoppingBag@3x.png"; sourceTree = "<group>"; };
+		1D19C9551FD936370090B804 /* shoppingBag@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shoppingBag@2x.png"; sourceTree = "<group>"; };
+		1D19C9561FD936370090B804 /* shoppingBag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shoppingBag.png; sourceTree = "<group>"; };
 		1DB4DC541FD7C92B00371AD7 /* DYShoppingBagViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DYShoppingBagViewController.h; sourceTree = "<group>"; };
 		1DB4DC551FD7C92B00371AD7 /* DYShoppingBagViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DYShoppingBagViewController.m; sourceTree = "<group>"; };
 		1DB4DC591FD7D90200371AD7 /* Target_DYShoppingBag.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Target_DYShoppingBag.h; sourceTree = "<group>"; };
@@ -109,9 +106,9 @@
 		1D4EE82C1FCDD0590062AFE5 /* DYShoppingBag */ = {
 			isa = PBXGroup;
 			children = (
-				1D19C9471FD913FF0090B804 /* shoppingBag.png */,
-				1D19C9461FD913FF0090B804 /* shoppingBag@2x.png */,
-				1D19C9481FD914000090B804 /* shoppingBag@3x.png */,
+				1D19C9561FD936370090B804 /* shoppingBag.png */,
+				1D19C9551FD936370090B804 /* shoppingBag@2x.png */,
+				1D19C9541FD936370090B804 /* shoppingBag@3x.png */,
 				1DB4DC581FD7D86800371AD7 /* Targets */,
 				1DB4DC541FD7C92B00371AD7 /* DYShoppingBagViewController.h */,
 				1DB4DC551FD7C92B00371AD7 /* DYShoppingBagViewController.m */,
@@ -314,11 +311,8 @@
 			files = (
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
 				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
-				1D19C94B1FD914000090B804 /* shoppingBag@3x.png in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
-				1D19C9491FD914000090B804 /* shoppingBag@2x.png in Resources */,
-				1D19C94A1FD914000090B804 /* shoppingBag.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
