@@ -30,7 +30,7 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
     self.shoppingBagLabel = [[UILabel alloc] initWithFrame:CGRectMake(50, 100, 300, 100)];
-    self.shoppingBagLabel.text = [NSString stringWithFormat:@"You have %lu products", self.productList.count];
+    self.shoppingBagLabel.text = [NSString stringWithFormat:@"You have %lu products", (unsigned long)self.productList.count];
     [self.view addSubview:self.shoppingBagLabel];
     
     
